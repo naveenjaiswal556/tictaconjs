@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac(NJ)</title>
+
+    <script type="text/javascript">
+        var turn = 1;
+        var inv=[0,0,0,0,0,0,0,0,0];
+        function i1 (yo1) {
+            if(inv[0]==0){
+                if(turn  == 1 ){
+                    yo1.src="files/X.png";
+                    turn = 2;
+                    inv[0]=1;
+                }else{
+                    yo1.src="files/O.jpg";
+                    turn = 1;
+                    inv[0]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i2 (yo2) {
+            if(inv[1]==0){
+                if(turn  == 1 ){
+                    yo2.src="files/X.png";
+                    turn = 2;
+                    inv[1]=1;
+                }else{
+                    yo2.src="files/O.jpg";
+                    turn = 1;
+                    inv[1]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i3 (yo3) {
+            if(inv[2]==0){
+                if(turn  == 1 ){
+                    yo3.src="files/X.png";
+                    turn = 2;
+                    inv[2]=1;
+                }else{
+                    yo3.src="files/O.jpg";
+                    turn = 1;
+                    inv[2]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i4 (yo4) {
+            if(inv[3]==0){
+                if(turn  == 1 ){
+                    yo4.src="files/X.png";
+                    turn = 2;
+                    inv[3]=1;
+                }else{
+                    yo4.src="files/O.jpg";
+                    turn = 1;
+                    inv[3]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i5 (yo5) {
+            if(inv[4]==0){
+                if(turn  == 1 ){
+                    yo5.src="files/X.png";
+                    turn = 2;
+                    inv[4]=1;
+                }else{
+                    yo5.src="files/O.jpg";
+                    turn = 1;
+                    inv[4]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i6 (yo6) {
+            if(inv[5]==0){
+                if(turn  == 1 ){
+                    yo6.src="files/X.png";
+                    turn = 2;
+                    inv[5]=1;
+                }else{
+                    yo6.src="files/O.jpg";
+                    turn = 1;
+                    inv[5]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i7 (yo7) {
+            if(inv[6]==0){
+                if(turn  == 1 ){
+                    yo7.src="files/X.png";
+                    turn = 2;
+                    inv[6]=1;
+                }else{
+                    yo7.src="files/O.jpg";
+                    turn = 1;
+                    inv[6]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i8 (yo8) {
+            if(inv[7]==0){
+                if(turn  == 1 ){
+                    yo8.src="files/X.png";
+                    turn = 2;
+                    inv[7]=1;
+                }else{
+                    yo8.src="files/O.jpg";
+                    turn = 1;
+                    inv[7]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+        function i9 (yo9) {
+            if(inv[8]==0){
+                if(turn  == 1 ){
+                    yo9.src="files/X.png";
+                    turn = 2;
+                    inv[8]=1;
+                }else{
+                    yo9.src="files/O.jpg";
+                    turn = 1;
+                    inv[8]=2;
+                }
+            }else{
+                alert("!!!It's Already Used...");
+            }
+            check();
+
+        }
+
+        function check () {
+            if (inv[0]==1&&inv[1]==1&&inv[2]==1){
+                ply1();
+            }else if (inv[3]==1&&inv[4]==1&&inv[5]==1){
+                ply1();
+            }else if (inv[6]==1&&inv[7]==1&&inv[8]==1){
+                ply1();
+            }else if (inv[0]==1&&inv[3]==1&&inv[6]==1){
+                ply1();
+            }else if (inv[1]==1&&inv[4]==1&&inv[7]==1){
+                ply1();
+            }else if (inv[2]==1&&inv[5]==1&&inv[8]==1){
+                ply1();
+            }else if (inv[0]==1&&inv[4]==1&&inv[8]==1){
+                ply1();
+            }else if (inv[2]==1&&inv[4]==1&&inv[6]==1){
+                ply1();
+            }else if (inv[0]==2&&inv[1]==2&&inv[2]==2){
+                ply2();
+            }else if (inv[3]==2&&inv[4]==2&&inv[5]==2){
+                ply2();
+            }else if (inv[6]==2&&inv[7]==2&&inv[8]==2){
+                ply2();
+            }else if (inv[0]==2&&inv[3]==2&&inv[6]==2){
+                ply2();
+            }else if (inv[1]==2&&inv[4]==2&&inv[7]==2){
+                ply2();
+            }else if (inv[2]==2&&inv[5]==2&&inv[8]==2){
+                ply2();
+            }else if (inv[0]==2&&inv[4]==2&&inv[8]==2){
+                ply2();
+            }else if (inv[2]==2&&inv[4]==2&&inv[6]==2){
+                ply2();
+            }else if(inv[0]!=0&&inv[1]!=0&&inv[2]!=0&&inv[3]!=0&&inv[4]!=0&&inv[5]!=0&&inv[6]!=0&&inv[7]!=0&&inv[8]!=0){
+                alert("!!!!! Match Draw.....");
+                rest();
+            }
+        }
+
+        function ply1() {
+            alert("***** X Wins *****");
+            rest();
+        }
+
+        function ply2() {
+            alert("***** O Wins *****");
+            rest();
+        }
+
+        function rest() {
+            window.location="yo.html";
+        }
+
+
+
+    </script>
+
+    
+</head>
+<body>
+<img src="files/-.png" height="200" width="200" onclick="i1(this)" id="im1">
+<img src="files/-.png" height="200" width="200" onclick="i2(this)" id="im2">
+<img src="files/-.png" height="200" width="200" onclick="i3(this)" id="im3">
+<br>
+<img src="files/-.png" height="200" width="200" onclick="i4(this)" id="im4">
+<img src="files/-.png" height="200" width="200" onclick="i5(this)" id="im5">
+<img src="files/-.png" height="200" width="200" onclick="i6(this)" id="im6">
+<br>
+<img src="files/-.png" height="200" width="200" onclick="i7(this)" id="im7">
+<img src="files/-.png" height="200" width="200" onclick="i8(this)" id="im8">
+<img src="files/-.png" height="200" width="200" onclick="i9(this)" id="im9">
+<br>
+</body>
+</html>
